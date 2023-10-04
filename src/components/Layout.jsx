@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const Layout = ({ children }) => {
+  useEffect(() => {
+    // Load the script asynchronously
+    const script = document.createElement("script");
+    script.src = "./cursor.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Clean up the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <div className="layout">
       <Navbar />
       <div className="cursor-following-background"></div>
-      <script src="./cursor.js"></script>
+      {/* <script src="./cursor.js"></script> */}
       <main className="container mx-auto mt-6">{children}</main>
       <footer className="fixed bottom-0 left-0 p-4 text-white flex justify-between w-full">
         <div className="flex flex-col space-y-4">
