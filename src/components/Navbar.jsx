@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <Link href="/">
-            Your Logo
+            SALMAN
           </Link>
         </div>
         <div className="space-x-4">
