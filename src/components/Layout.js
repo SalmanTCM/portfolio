@@ -4,8 +4,10 @@ import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className="layout">
       <Navbar />
+      <div className="cursor-following-background"></div>
+      <script src="./cursor.js"></script>
       <main className="container mx-auto mt-6">{children}</main>
       <footer className="fixed bottom-0 left-0 p-4 text-white flex justify-between w-full">
         <div className="flex flex-col space-y-4">
