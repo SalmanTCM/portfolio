@@ -143,3 +143,7 @@ p {
   position: relative;
   z-index: 1;
 } */
+.bg-hero-pattern {
+  background-image: url('/src/assets/herobg.png') !important;
+  background-size: cover;
+}

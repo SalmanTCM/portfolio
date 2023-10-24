@@ -10,11 +10,16 @@ import Skill from "../components/Skill";
 const Home = () => {
   return (
     <Layout>
+      <div className="relative z-0 bg-primary">
+      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
       <Hero/>
+      </div>
+      
       <About/>
       <Skill/>
       {/* <SkillsContact/> */}
       {/* <ThreeCanvas/> */}
+      </div>
     </Layout>
   );
 };
